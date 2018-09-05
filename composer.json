@@ -1,0 +1,11 @@
+{
+    "name": "ivan/scaffold",
+    "description": "scaffolds to laravel",
+    "authors": [
+        {
+            "name": "Ivan Vazquez",
+            "email": "idvazquezrivera@gmail.com"
+        }
+    ],
+    "require": {}
+}
