@@ -1,11 +1,20 @@
 {
     "name": "idvazquezrivera/scaffold",
-    "description": "scaffolds to laravel",
+    "description": "scaffolding laravel",
+    "type": "package",
+    "require": {
+        "laravel/framework": "5.6"
+    },
+    "license": "MIT",
     "authors": [
         {
-            "name": "Ivan Vazquez",
+            "name": "Ivan  Vazquez",
             "email": "idvazquezrivera@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Crud\\": "src/Crud/"
+        }
+    },
 }
