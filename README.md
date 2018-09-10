@@ -1,5 +1,5 @@
-Laravel Scaffold
-================
+Laravel Scaffold CRUD
+=====================
 Crea catalogo tipo CRUD de manera rapida.
 
 Instalacion
@@ -35,7 +35,11 @@ Configuracion y Personalizacion
 -------------------------------
 1. Para catalogos simples no requiere ninguna configuracion extra.
 2. Puedes reescribir las acciones en el controlador.
-3. Personaliza las vistas colocando archivos __form.blade.php__, __show.blade.php__ o __show.blade.php__ en la ruta __resources/views/items__
+3. En la ruta __resources/views/items__ agrega tus propias vistas 
+ 1. __form.blade.php__, 
+ 2. __show.blade.php__ 
+ 3. __show.blade.php__ 
+
 
 Caracteristicas
 ---------------
