@@ -36,9 +36,9 @@ Configuracion y Personalizacion
 1. Para catalogos simples no requiere ninguna configuracion extra.
 2. Puedes reescribir las acciones en el controlador.
 3. En la ruta __resources/views/items__ agrega tus propias vistas 
- 1. __form.blade.php__, 
- 2. __show.blade.php__ 
- 3. __show.blade.php__ 
+ 3.1. __form.blade.php__, 
+ 3.2. __show.blade.php__ 
+ 3.3. __show.blade.php__ 
 
 
 Caracteristicas
