@@ -1,6 +1,6 @@
 {
     "name": "idvazquezrivera/scaffold",
-    "description": "scaffolding laravel",
+    "description": "Laravel Scaffold CRUD, Crea catalogos tipo CRUD de manera rapida.",
     "type": "package",
     "require": {
     },
