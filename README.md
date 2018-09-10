@@ -5,31 +5,31 @@ Crea catalogo tipo CRUD de manera rapida.
 Instalacion
 -----------
 Instalacion mediante composer
-´´´
+```
 composer require idvazquezrivera/scaffold
-´´´
+```
+
 Agregar en el archivo __config/app.php__ el siguiente alias
-´´´
-'CrudController' => Crud\CrudController::class
-´´´´
+```
+CrudController' => Crud\CrudController::class
+```
 
 Modo de uso
 -----------
-1.- Crea un Controlador usando artisan 
-
-´´´
+1.- Usa artisan para crear un nuevo controlador 
+```
 php artisan make controller ItemsController
-´´´
+```
 
 2.- Crea las rutas para el catalogo tipo source
-´´´
+```
 Route::resource('items', 'ItemsController');
-´´´
+```
 
 3.- Por ultimo extiende el controlador ItemsCotroller de CrudCotroller
-´´´
+```
 class ItemsController extends CrudController
-´´´
+```
 
 Configuracion y Personalizacion
 -------------------------------
