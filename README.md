@@ -6,12 +6,41 @@ Instalacion
 -----------
 Instalacion mediante composer
 ```
-composer require idvazquezrivera/scaffold
+composer require idvazquezrivera/laravel-crud-builder
+```
+Registrar __CrudProvider__ en el archivo __config/app.php__ 
+```
+Idvazquezrivera\LaravelCrudBuilder\CrudProvider::class,
 ```
 
-Agregar en el archivo __config/app.php__ el siguiente alias
+Agregar en __config/app.php__ el siguiente alias
 ```
-CrudController' => Crud\CrudController::class
+'CrudController' =>  Idvazquezrivera\LaravelCrudBuilder\CrudController::class,
+```
+
+En composer.json agregar el provider
+```
+"extra": {
+     "laravel": {
+          "providers": [
+             "Idvazquezrivera\\LaravelCrudBuilder\\CrudProvider"
+         ]
+     }
+ },
+```
+Tambien en composer.json agregar en autoload psr-4 
+```
+"Idvazquezrivera\\LaravelCrudBuilder\\" : "vendor/idvazquezrivera/src/LaravelCrudBuilder/"
+```
+
+En terminal ejecutamos el autoload usando composer
+```
+composer dump-autoload
+```
+
+Publicar la configuracion de laravel-crud-builder con artisan
+```
+php artisan vendor:publish --tag=crud        
 ```
 
 Modo de uso
@@ -21,14 +50,17 @@ Modo de uso
 php artisan make controller ItemsController
 ```
 
-2.- Crea las rutas para el catalogo tipo source
+2.- Crea las rutas para el catalogo tipo source en __routes/web.php
 ```
-Route::resource('items', 'ItemsController');
+Route::resource('items', 'App\Http\Controllers\ItemsController');
 ```
 
 3.- Por ultimo extiende el controlador ItemsCotroller de CrudCotroller
 ```
+use Idvazquezrivera\LaravelCrudBuilder\CrudController;
+
 class ItemsController extends CrudController
+
 ```
 
 Configuracion y Personalizacion
