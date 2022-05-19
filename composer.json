@@ -1,19 +1,17 @@
 {
-    "name": "idvazquezrivera/scaffold",
-    "description": "Crea catalogos tipo CRUD de manera rapida.",
-    "type": "package",
-    "require": {
-    },
+    "name": "idvazquezrivera/collection",
+    "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Idvazquezrivera\\Collection\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "Ivan  Vazquez",
+            "name": "Ivan David Vazquez Rivera",
             "email": "idvazquezrivera@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Crud\\": "src/Crud/"
-        }
-    }
+    "require": {}
 }
