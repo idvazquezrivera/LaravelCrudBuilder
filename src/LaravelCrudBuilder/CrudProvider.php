@@ -1,6 +1,6 @@
 <?php
  
-namespace Idvazquezrivera\Collection\Crud;
+namespace Idvazquezrivera\LaravelCrudBuilder;
  
 use Illuminate\Support\ServiceProvider;
  

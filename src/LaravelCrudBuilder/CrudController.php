@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Idvazquezrivera\Collection\Crud;
+namespace Idvazquezrivera\LaravelCrudBuilder;
 
 use Illuminate\Support\Facades\DB as DB;
 use Illuminate\Support\Facades\View as View;

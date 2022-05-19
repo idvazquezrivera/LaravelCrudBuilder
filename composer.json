@@ -1,10 +1,11 @@
 {
-    "name": "idvazquezrivera/collection",
+    "name": "idvazquezrivera/laravel-crud-builder",
+    "description": "Build cruds in laravel",
     "type": "library",
-    "license": "MIT",
+    "license": "Md",
     "autoload": {
         "psr-4": {
-            "Idvazquezrivera\\Collection\\": "src/"
+            "Idvazquezrivera\\LaravelCrudBuilder\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +14,6 @@
             "email": "idvazquezrivera@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
