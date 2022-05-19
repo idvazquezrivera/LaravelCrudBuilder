@@ -2,7 +2,7 @@
     "name": "idvazquezrivera/laravel-crud-builder",
     "description": "Build cruds in laravel",
     "type": "library",
-    "license": "Md",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Idvazquezrivera\\LaravelCrudBuilder\\": "src/"
