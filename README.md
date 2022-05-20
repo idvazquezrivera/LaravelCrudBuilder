@@ -54,7 +54,6 @@ Add provider in main composer.json
     ]
   }
 },
-...
 "autoload": {
   "psr-4": {
     "Idvazquezrivera\\LaravelCrudBuilder\\" : "vendor/idvazquezrivera/src/LaravelCrudBuilder/"
