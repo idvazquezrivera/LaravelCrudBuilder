@@ -53,7 +53,7 @@ Add provider in main composer.json
       "Idvazquezrivera\\LaravelCrudBuilder\\CrudProvider"
     ]
   }
-}
+},
 ...
 "autoload": {
   "psr-4": {
