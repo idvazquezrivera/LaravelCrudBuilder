@@ -1,5 +1,5 @@
 # Laravel Crud Builder
-Simple functionality provider to build raws in Laravel quickly, easy to use and customize.
+Simple functionality provider to build cruds in Laravel quickly, easy to use and customize.
 
 ## Getting starter
 
