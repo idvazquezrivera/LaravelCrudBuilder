@@ -5,82 +5,86 @@ Simple functionality provider to build raws in Laravel quickly, easy to use and 
 
 ### 1. Install Laravel 
 
-Use [composer](https://getcomposer.org/) or [laravel installation](https://laravel.com/docs/8.x/installation) to create a new app.
+Create new laravel app, visit [laravel docs](https://laravel.com/docs), or try downloading this [laravel crud builder example](https://github.com/idvazquezrivera/ExampleLaravelCrudBuilder.git) or use your existent laravel app.
 
-If you use [composer](https://getcomposer.org/), run this command
+If use [composer](https://getcomposer.org/), run this
 ```bash
 composer create-project laravel/laravel my-app
 ```
 
-or this if you use the [laravel installation](https://laravel.com/docs/8.x/installation)
+or use [laravel installation](https://laravel.com/docs/8.x/installation)
 ```bash
 laravel new my-app
 ``` 
-
-### 2. Install Laravel Crud Builder
-Locate in proect folder and execute the next command to generate a new key 
+Run in project folder
 ```bash
 php artisan key:generate
 ```
-
 Copy config file template and configure your information in .env  
 ```bash
 cp .env.example .env
 ```
+### 2. Install Laravel Crud Builder
 
-Instala Laravel Crud Builder usando [composer](https://getcomposer.org/)
+Install laravel crud builder 
 ```bash
 composer require idvazquezrivera/laravel-crud-builder
 ```
 
-Registrar `CrudProvider` en el archivo `config/app.php`  
-```php
-Idvazquezrivera\LaravelCrudBuilder\CrudProvider::class,
+Register `CrudProvider` and `CrudController` in `config/app.php`  
+```php  
+
+'providers' => [
+  Idvazquezrivera\LaravelCrudBuilder\CrudProvider::class,
+  ...
+]
+...
+'aliases' => [
+  'CrudController' =>  Idvazquezrivera\LaravelCrudBuilder\CrudController::class
+  ...
+]
 ```
 
-Agregar en `config/app.php` el siguiente alias
-```php
-'CrudController' =>  Idvazquezrivera\LaravelCrudBuilder\CrudController::class,
-```
-
-Agregar el provider el archivo composer.json ubicado en la raiz de nuestro proyecto
-```
+Add provider in main composer.json
+```json
 "extra": {
-     "laravel": {
-          "providers": [
-             "Idvazquezrivera\\LaravelCrudBuilder\\CrudProvider"
-         ]
-     }
- },
-```
-Tambien en el mismo archivo composer.json agregar en la seccion `autoload psr-4` 
-```
-"Idvazquezrivera\\LaravelCrudBuilder\\" : "vendor/idvazquezrivera/src/LaravelCrudBuilder/"
+  "laravel": {
+    "providers": [
+      "Idvazquezrivera\\LaravelCrudBuilder\\CrudProvider"
+    ]
+  }
+}
+...
+"autoload": {
+  "psr-4": {
+    "Idvazquezrivera\\LaravelCrudBuilder\\" : "vendor/idvazquezrivera/src/LaravelCrudBuilder/"
+  }
+}
 ```
 
-En terminal ejecutamos el autoload usando composer
-```
+Run composer autoload
+```bash
 composer dump-autoload
 ```
 
-Publicar la configuracion de laravel-crud-builder con artisan
-```
-php artisan vendor:publish --tag=crud        
+Publish laravel crud builder config with artisan
+```bash
+php artisan vendor:publish --tag=crud    
 ```
 
-### 3. Crea un nuevo crud 
+### 3. Create crud 
 
-Usa artisan para crear un nuevo controlador 
-``` s
+Use artisan to create a new controller 
+```bash
 php artisan make controller ItemsController
 ```
 
-Crea las rutas para el catalogo tipo source en `routes/web.php
+Add routes in `routes/web.php`
 ```php
 Route::resource('items', 'App\Http\Controllers\ItemsController');
 ```
 
-Por ultimo extiende el controlador ItemsCotroller de CrudCotroller
+ItemsCotroller extends from CrudCotroller
 ```php
 use Idvazquezrivera\LaravelCrudBuilder\CrudController;
 
@@ -88,24 +92,23 @@ class ItemsController extends CrudController
 
 ```
 
-Configuracion y Personalizacion
--------------------------------
-1. Para catalogos simples no requiere ninguna configuracion extra.
-2. Puedes reescribir las acciones en el controlador.
-3. En la ruta `resources/views/items` agrega tus propias vistas 
- - form.blade.php 
- - show.blade.php 
- - show.blade.php 
+## Configure and customize
+
+1. For simple catalogs it does not require any extra configuration.
+2. You can rewrite the shares in the controller.
+3. On the `resources/views/items` route add your own views
+    - form.blade.php
+    - show.blade.php
+    - index.blade.php
 
 
-Caracteristicas
----------------
-- No requiere la creacion de modelos.
-- Carga de archivos
-- Validacion de formularios
-- Pruebas unitarias
+## Features
+-----------
+- Does not require the creation of models.
+- File loading
+- Validation of forms
+- Unit tests
 
 
-Example using Laravel Crud Builder 
-----------------------------------
-https://github.com/idvazquezrivera/Scaffold-Laravel-Crud.git 
+## Example 
+https://github.com/idvazquezrivera/lavel-crud.git
